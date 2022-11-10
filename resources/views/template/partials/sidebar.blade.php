@@ -174,6 +174,41 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('createAccount') }}" class="nav-link">
+                  <i class="nav-icon fas fa-solid fa-user-plus"></i></i></i>
+                  <p>Create Account</p>
+                </a>
+              </li>
+          </ul>
+          </li>
+          <li class="nav-item">
+            <a href= "#" class="nav-link">
+            <i class="nav-icon fas fa-solid fa-table"></i></i>
+              <p>
+                Data
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('tableAccount') }}" class="nav-link">
+                  <i class="nav-icon fas fa-solid fa-table"></i></i>
+                  <p>Table</p>
+                </a>
+              </li>
+            <ul class="nav-item">
+              <li class="nav-item">
+                <a href="{{ route('data_tablesAccount') }}" class="nav-link">
+                  <i class="nav-icon fas fa-solid fa-table"></i></i>
+                  <p>Data Tables</p>
+                </a>
+              </li>
+          </ul>
+          </li>
+
+
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>

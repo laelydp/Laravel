@@ -100,3 +100,11 @@ Route::get('/account/create',
 Route::get('/account/show',
 [AccountController::class, 'show']
 )->name('showAccount');;
+
+Route::get('/account/table',
+[AccountController::class, 'table']
+)->name('tableAccount');;
+
+Route::get('/account/data_tables',
+[AccountController::class, 'data_tables']
+)->name('data_tablesAccount');;

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use\App\Http\Controllers\AkunContoller;
 use\App\Http\Controllers\AccountController;
+use\App\Http\Controllers\SiswaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -99,7 +100,7 @@ Route::get('/account/create',
 
 Route::get('/account/show',
 [AccountController::class, 'show']
-)->name('showAccount');;
+)->name('showAcount');;
 
 Route::get('/account/table',
 [AccountController::class, 'table']
@@ -108,3 +109,34 @@ Route::get('/account/table',
 Route::get('/account/data_tables',
 [AccountController::class, 'data_tables']
 )->name('data_tablesAccount');;
+
+/* Route::get('/student',
+[SiswaController::class, 'index']
+)->name('StudentIndex');;
+
+Route::get('/student/create',
+[SiswaController::class, 'create']
+)->name('StudentCreate');;
+
+Route::post('/student',
+[SiswaController::class, 'store']
+)->name('StudentStore');;
+
+Route::get('/student{id}',
+[SiswaController::class, 'show']
+)->name('StudentShow');;
+
+Route::get('/student/{id}/edit',
+[SiswaController::class, 'edit']
+)->name('StudentEdit');;
+
+Route::put('/student/{id}',
+[SiswaController::class, 'update']
+)->name('StudentUpdate');;
+
+Route::delete('/student/{id}',
+[SiswaController::class, 'destroy']
+)->name('StudentDestroy');;*/
+
+Route::resource('student', SiswaController::class);
+

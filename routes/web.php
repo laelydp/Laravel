@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use\App\Http\Controllers\AkunContoller;
 use\App\Http\Controllers\AccountController;
 use\App\Http\Controllers\SiswaController;
+use\App\Http\Controllers\KelasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -139,4 +140,5 @@ Route::delete('/student/{id}',
 )->name('StudentDestroy');;*/
 
 Route::resource('student', SiswaController::class);
+Route::resource('class', KelasController::class);
 

@@ -1,6 +1,6 @@
 @extends('template.master')
 
 @section('judul')
-<h1>INI HALAMAN INDEX DARI CREATE SISWA</h1>
+<h1>INI HALAMAN CREATE KELAS</h1>
 @endsection
 

@@ -14,7 +14,9 @@ class KelasController extends Controller
      */
     public function index()
     {
-        return view ('Class.index');
+        $datakelas = DB::table('kelas')->get();
+        //statement diatas sama dengan SELECT * FROM siswa
+        return view ('Class.index', compact('datakelas'));
     }
 
     /**
@@ -55,6 +57,9 @@ class KelasController extends Controller
     public function show($id)
     {
         //
+        $showSiswaById = DB::table('kelas')->where('id',$id)->first();
+        //diatas sama dengan SELECT * FROM siswa WHERE id = $id
+        return view('Class.show', compact('showSiswaById'));
     }
 
     /**
@@ -66,6 +71,9 @@ class KelasController extends Controller
     public function edit($id)
     {
         //
+        $datakelas = DB::table('kelas')->get();
+        //statement diatas sama dengan SELECT * FROM siswa
+        return view ('Class.edit', compact('datakelas'));
     }
 
     /**

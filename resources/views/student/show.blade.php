@@ -10,7 +10,7 @@
         <div class="col-md-12">
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add New Student</h3>
+                <h3 class="card-title">Detail Student</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,29 +19,27 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputNIS">Nomor Induk Siswa</label>
-                    <input type="text" name="nis" class="form-control" id="inputNIS" placeholder="Masukkan NIS">
+                    <input type="text" name="nis" class="form-control" id="inputNIS" placeholder="Masukkan NIS" value="{{ $showSiswaById->nomor_induk_siswa}}" disabled>
                   </div>
                   <div class="form-group">
                     <label for="inputNama">Nama Siswa</label>
-                    <input type="text" name="nama" class="form-control" id="inputNama" placeholder="Masukkan Nama">
+                    <input type="text" name="nama" class="form-control" id="inputNama" placeholder="Masukkan Nama" value="{{ $showSiswaById->nama }}" disabled>
                   </div>
                   <div class="form-group">
                     <label for="inputAlamat">Alamat</label>
-                    <input type="text" name="alamat" class="form-control" id="inputAlamat" placeholder="Masukkan alamat">
+                    <input type="text" name="alamat" class="form-control" id="inputAlamat" placeholder="Masukkan alamat" value="{{ $showSiswaById->alamat }}" disabled></textarea>
                   </div>
                   <div class="form-group">
-                        <label>Jenis Kelamin</label>
-                        <select class="form-control" name="jenis_kelamin">
-                        <option disabled selected>-- Pilih Salah Satu --</option>
-                          <option value=P>Perempuan</option>
-                          <option value=L>Laki-Laki</option>
-                        </select>
+                  <label>Jenis Kelamin</label>
+                <select class="form-control" name="jenis_kelamin">
+                  <option value="L" disabled {{ $showSiswaById->jenis_kelamin == "L" ? "selected" : "" }}>Laki-laki</option>
+                  <option value="P" disabled {{ $showSiswaById->jenis_kelamin == "P" ? "selected" : "" }}>Perempuan</option>
+                </select>
                    </div>
            </div>
                 <!-- /.card-body -->
-
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Back</button>
                 </div>
               </form>
             </div>
